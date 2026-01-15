@@ -27,10 +27,26 @@ url: "https://thakar-advait.github.io" # the base hostname & protocol for your s
 github_username:  Thakar-Advait
 
 # Build settings
-theme: minima
+# Using custom layouts instead of theme
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-sass-converter
+
+# Sass configuration
+sass:
+  style: compressed
+  sourcemap: never
+
+# Syntax highlighting
+highlighter: rouge
+markdown: kramdown
+kramdown:
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
+      start_line: 1
 
 # Exclude from processing.
 # The following items will not be processed, by default.

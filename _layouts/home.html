@@ -1,0 +1,41 @@
+---
+layout: default
+---
+
+<div class="container">
+  <div class="hero-section">
+    <h1 class="hero-title">{{ site.title | default: "Welcome" }}</h1>
+    <p class="hero-description">{{ site.description | default: "A modern blog about technology and programming" }}</p>
+  </div>
+
+  <section class="posts-section">
+    <h2 class="section-title">Posts</h2>
+    <div class="posts-grid">
+      {% for post in site.posts %}
+      <article class="post-card">
+        <div class="post-card-header">
+          <time class="post-date" datetime="{{ post.date | date: "%Y-%m-%d" }}">
+            {{ post.date | date: "%B %d, %Y" }}
+          </time>
+          {% if post.categories %}
+          <div class="post-categories">
+            {% for category in post.categories %}
+            <span class="category-tag">{{ category }}</span>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </div>
+        <h3 class="post-title">
+          <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+        </h3>
+        {% if post.excerpt %}
+        <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+        {% endif %}
+        <div class="post-footer">
+          <a href="{{ post.url | relative_url }}" class="read-more">Read more →</a>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+</div>
