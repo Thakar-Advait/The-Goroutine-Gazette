@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Welcome to The Goroutine Gazette
-permalink: /preface/
 ---
 
 This blog is a place where I, Advait Thakar, share my journey learning Go and exploring its concurrency features like goroutines and channels. I'm just starting out, and through these posts, I document experiments, tutorials, and insights as I grow my knowledge and skills.

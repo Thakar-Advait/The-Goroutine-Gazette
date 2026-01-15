@@ -5,9 +5,7 @@ layout: default
 <div class="container">
   {% assign welcome_post = null %}
   {% for post in site.posts %}
-    {% assign post_permalink = post.permalink | default: "" %}
-    {% assign post_url = post.url | default: "" %}
-    {% if post.title == "Welcome to The Goroutine Gazette" or post_permalink == "/preface/" or post_url contains "preface" or post.path contains "welcome-to-jekyll" %}
+    {% if post.title == "Welcome to The Goroutine Gazette" or post.path contains "welcome-to-jekyll" %}
       {% assign welcome_post = post %}
       {% break %}
     {% endif %}
