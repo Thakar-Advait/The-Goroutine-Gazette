@@ -1,5 +1,9 @@
 source "https://rubygems.org"
 gem "logger"
+# Gems required for Ruby 4.0.0+ (removed from standard library)
+gem "csv"
+gem "bigdecimal"
+gem "webrick"  # Required for Jekyll serve (removed from Ruby 3.0+)
 
 # Hello! This is where you manage which Jekyll version is used to run.
 # When you want to use a different version, change it below, save the
@@ -9,13 +13,9 @@ gem "logger"
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-gem "jekyll", "~> 4.4.1"
-gem "jekyll-sass-converter", "~> 2.2"
-gem "rouge", "~> 4.0"
-gem "bigdecimal", "~> 3.1"
-# If you want to use GitHub Pages, remove the "gem "jekyll"" above and
-# uncomment the line below. To upgrade, run `bundle update github-pages`.
-# gem "github-pages", group: :jekyll_plugins
+# For GitHub Pages, use the github-pages gem which includes Jekyll and all compatible plugins
+gem "github-pages", group: :jekyll_plugins
+
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"

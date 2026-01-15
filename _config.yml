@@ -22,8 +22,8 @@ title: The Goroutine Gazette
 email: advait.thakar18@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   The Goroutine Gazette is your go-to destination for insights, experiments, and tutorials in Go programming. From goroutines and channels to concurrency patterns and real-world projects, we explore the art and science of building efficient, scalable systems with Go.
-baseurl: "/The-Goroutine-Gazette" # the subpath of your site, e.g. /blog
-url: "https://thakar-advait.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog (empty for user/organization sites)
+url: "https://thakar-advait.github.io" # the base hostname & protocol for your site
 github_username:  Thakar-Advait
 
 # Build settings
@@ -32,6 +32,9 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sass-converter
+
+# GitHub Pages settings
+github: [metadata]
 
 # Sass configuration
 sass:
